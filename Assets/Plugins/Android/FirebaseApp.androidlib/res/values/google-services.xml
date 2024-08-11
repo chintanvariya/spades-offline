@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
-  <string name="gcm_defaultSenderId" translatable="false">248418748706</string>
-  <string name="google_storage_bucket" translatable="false">call-break-offline-de029.appspot.com</string>
-  <string name="project_id" translatable="false">call-break-offline-de029</string>
-  <string name="google_api_key" translatable="false">AIzaSyAenMxMr-6rpGonkuMi5fORFzd4dEVCG10</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAenMxMr-6rpGonkuMi5fORFzd4dEVCG10</string>
-  <string name="google_app_id" translatable="false">1:248418748706:android:fd3472bdc92b301eab3d7b</string>
+  <string name="gcm_defaultSenderId" translatable="false">756695989975</string>
+  <string name="google_storage_bucket" translatable="false">spades-offline-851e2.appspot.com</string>
+  <string name="project_id" translatable="false">spades-offline-851e2</string>
+  <string name="google_api_key" translatable="false">AIzaSyCcd6-D7Ry8fD-N8sJWEhEdZljcTcatnI4</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCcd6-D7Ry8fD-N8sJWEhEdZljcTcatnI4</string>
+  <string name="google_app_id" translatable="false">1:756695989975:android:3a276b827cab273e3afa92</string>
 </resources>

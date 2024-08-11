@@ -318,12 +318,12 @@ namespace FGSOfflineCallBreak
         public void OnButtonPlayNow(CallBreakLobbyUiController lobbyUiController)
         {
             currentLobbyPlay = lobbyUiController;
-            //if (CallBreakConstants.callBreakRemoteConfig.adsDetails.isShowInterstitialAdsOnLobby)
-            //{
-            //    CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
-            //    GoogleMobileAds.Sample.InterstitialAdController.ShowInterstitialAd();
-            //}
-            //else
+            if (CallBreakConstants.callBreakRemoteConfig.adsDetails.isShowInterstitialAdsOnLobby)
+            {
+                CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
+                GoogleMobileAds.Sample.InterstitialAdController.ShowInterstitialAd();
+            }
+            else
                 OnAdFullScreenContentClosedHandler();
         }
 

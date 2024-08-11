@@ -85,6 +85,9 @@ namespace FGSOfflineCallBreak
 
                         }).OnComplete(() =>
                         {
+                            CallBreakGameManager.instance.particlesOfHukum.gameObject.SetActive(true);
+                            CallBreakGameManager.instance.particlesOfHukum.Play();
+
                             table.transform.DOShakePosition(0.2f, 100, 300).OnComplete(() =>
                             {
                                 Debug.Log("Animation compeleted here");
@@ -92,8 +95,7 @@ namespace FGSOfflineCallBreak
                                 {
                                     int removeIndex = CallBreakUIManager.Instance.gamePlayController.allPlayer[0].myCards.IndexOf(this);
                                     CardPositionSet.instance.RemoveCard(gameObject);
-                                    CallBreakGameManager.instance.particlesOfHukum.gameObject.SetActive(true);
-                                    CallBreakGameManager.instance.particlesOfHukum.Play();
+                                    CallBreakGameManager.instance.particlesOfHukum.gameObject.SetActive(false);
                                 }
                                 StartCoroutine(CallBreakGameManager.instance.NextUserTurn());
                             });
@@ -118,7 +120,6 @@ namespace FGSOfflineCallBreak
                 });
             }
         }
-
     }
 
     [System.Serializable]

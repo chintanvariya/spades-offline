@@ -123,7 +123,6 @@ namespace FGSOfflineCallBreak
             else if (currentTodaysDate - currentDay < claimStartDay)
             {
                 Debug.Log($"<color=green><b> Today </b></color>");
-                CallBreakUIManager.Instance.toolTipsController.OpenToolTips("AdsIsNotReady", "You have already claim form this day !!", "");
                 return;
             }
 

@@ -40,7 +40,7 @@ namespace FGSOfflineCallBreak
 
             UpdateTheRoundText();
 
-            CallBreakGameManager.instance.clubCardCounter = 1;
+            CallBreakGameManager.instance.clubCardCounter = 0;
             CallBreakCardAnimation.instance.StartGamePlay(1f);
 
             CallBreakGameManager.isInGamePlay = true;
@@ -49,7 +49,7 @@ namespace FGSOfflineCallBreak
             //Card Deal Animation
         }
 
-        public void UpdateTheRoundText() => gamePlayRoundText.text = CallBreakGameManager.instance.currentRound + "/" + CallBreakGameManager.instance.totalRound;
+        public void UpdateTheRoundText() => gamePlayRoundText.text = $"{CallBreakGameManager.instance.currentRound}";
 
         public void OnButtonClicked(string buttonName)
         {

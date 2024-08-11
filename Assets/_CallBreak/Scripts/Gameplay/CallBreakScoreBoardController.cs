@@ -186,15 +186,15 @@ namespace FGSOfflineCallBreak
             switch (buttonName)
             {
                 case "Continue":
-                    //if (CallBreakConstants.callBreakRemoteConfig.adsDetails.isShowInterstitialAdsOnScoreBoard)
-                    //{
-                    //    CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
-                    //    GoogleMobileAds.Sample.InterstitialAdController.ShowInterstitialAd();
-                    //}
-                    //else
-                    //{
-                    OnAdFullScreenContentClosedHandler();
-                    //}
+                    if (CallBreakConstants.callBreakRemoteConfig.adsDetails.isShowInterstitialAdsOnScoreBoard)
+                    {
+                        CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
+                        GoogleMobileAds.Sample.InterstitialAdController.ShowInterstitialAd();
+                    }
+                    else
+                    {
+                        OnAdFullScreenContentClosedHandler();
+                    }
                     break;
 
                 default:
