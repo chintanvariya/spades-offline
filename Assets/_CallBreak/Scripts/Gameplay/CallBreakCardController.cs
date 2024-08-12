@@ -88,16 +88,20 @@ namespace FGSOfflineCallBreak
                             CallBreakGameManager.instance.particlesOfHukum.gameObject.SetActive(true);
                             CallBreakGameManager.instance.particlesOfHukum.Play();
 
-                            table.transform.DOShakePosition(0.2f, 100, 300).OnComplete(() =>
+                            DOVirtual.DelayedCall(1f, () =>
                             {
-                                Debug.Log("Animation compeleted here");
-                                if (CallBreakGameManager.currentPlayerIndex == 0)
+
+                                table.transform.DOShakePosition(0.2f, 100, 300).OnComplete(() =>
                                 {
-                                    int removeIndex = CallBreakUIManager.Instance.gamePlayController.allPlayer[0].myCards.IndexOf(this);
-                                    CardPositionSet.instance.RemoveCard(gameObject);
-                                    CallBreakGameManager.instance.particlesOfHukum.gameObject.SetActive(false);
-                                }
-                                StartCoroutine(CallBreakGameManager.instance.NextUserTurn());
+                                    Debug.Log("Animation compeleted here");
+                                    if (CallBreakGameManager.currentPlayerIndex == 0)
+                                    {
+                                        int removeIndex = CallBreakUIManager.Instance.gamePlayController.allPlayer[0].myCards.IndexOf(this);
+                                        CardPositionSet.instance.RemoveCard(gameObject);
+                                        CallBreakGameManager.instance.particlesOfHukum.gameObject.SetActive(false);
+                                    }
+                                    StartCoroutine(CallBreakGameManager.instance.NextUserTurn());
+                                });
                             });
                         });
                     });

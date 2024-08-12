@@ -41,6 +41,8 @@ namespace FGSOfflineCallBreak
         public int totalScore;
         public bool isSelfPlayer;
 
+        public Transform emojiTransform;
+
         public CallBreakUserTurnTimer turnTimer;
 
         private void OnEnable()

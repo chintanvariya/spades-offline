@@ -53,7 +53,11 @@ namespace FGSOfflineCallBreak
             if (registerUserName.text.Length > 5 && registerUserName.text.Length < 10)
                 registerButton.interactable = true;
             else
+            { 
                 registerButton.interactable = false;
+                CallBreakUIManager.Instance.toolTipsController.OpenToolTips("AdsIsNotReady", "Enter at least 5 characters", "");
+            }
+
 
             CallBreakGameManager.instance.selfUserDetails.userName = registerUserName.text;
             CallBreakGameManager.instance.selfUserDetails.userChips = 500;
