@@ -115,6 +115,10 @@ namespace FGSOfflineCallBreak
                         {
                             diamondCards[0].ThrowCardAnimation(myThrowCardPos, staticSeatIndex);
                         }
+                        else
+                        {
+                            myCards[myCards.Count - 1].ThrowCardAnimation(myThrowCardPos, staticSeatIndex);
+                        }
                     }
                     else
                     {

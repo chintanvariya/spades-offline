@@ -221,6 +221,7 @@ namespace FGSOfflineCallBreak
                     playButton = "Play";
                     winAmount = $"Free";
                     practicesAndCoin = practiesAndCoins[0];
+                    keys = "0";
                     allLobbies[i].bg.sprite = freeLobbyBg;
                 }
                 else

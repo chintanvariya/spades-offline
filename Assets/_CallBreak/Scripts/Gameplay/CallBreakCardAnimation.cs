@@ -67,6 +67,7 @@ namespace FGSOfflineCallBreak
 
         internal IEnumerator SetAndStartGamePlay(float timeToExecute)
         {
+            CallBreakGameManager.instance.clubCardCounter = 0;
             CallBreakGameManager.instance.currentRound++;
 
             gamePlayController.allPlayer.ForEach(c => c.dealerIcon.SetActive(false));
