@@ -123,7 +123,8 @@ public class FirebaseController : MonoBehaviour
         if (isFirebaseInit)
         {
             string logEvent = $"ID_{SystemInfo.deviceUniqueIdentifier}_Application_Version_{Application.version}_FunctionName_{functionName}_Log_{log}";
-            Debug.Log($"$LogEVENT {logEvent}");
+            //Debug.Log($"$LogEVENT {logEvent}");
+            Debug.Log($"FireBase Log Event => <color><b> {scriptName} </b></color>");
             Firebase.Analytics.FirebaseAnalytics.LogEvent(scriptName, functionName, log);
         }
     }
@@ -156,7 +157,7 @@ public class FirebaseController : MonoBehaviour
                 {
                     Firebase.Analytics.FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
                     // Set the log level for Firebase Analytics
-                    FirelogEvent("FirebaseController", "FireBaseInitialize", "Firebase_Successful_Initialized");
+                    FirelogEvent("Firebase_Successful_Initialized", "FireBaseInitialize", "Firebase_Successful_Initialized");
                 });
 
                 CheckRemoteConfigValues();

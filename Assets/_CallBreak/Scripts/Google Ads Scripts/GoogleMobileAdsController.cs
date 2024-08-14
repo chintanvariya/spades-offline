@@ -86,9 +86,7 @@ namespace GoogleMobileAds.Samples
                 }
                 else
                 {
-                    Debug.Log("Google Mobile Ads consent updated: "
-                        + ConsentInformation.ConsentStatus);
-
+                    Debug.Log("Google Mobile Ads consent updated: " + ConsentInformation.ConsentStatus);
                 }
 
                 if (_consentController.CanRequestAds)
@@ -132,6 +130,7 @@ namespace GoogleMobileAds.Samples
                     }
                 }
 
+                FirebaseController.instance.FirelogEvent("GoogleMobileAds_Successful_Initialized", "FireBaseInitialize", "Firebase_Successful_Initialized");
                 Debug.Log("Google Mobile Ads initialization complete.");
                 _isInitialized = true;
 

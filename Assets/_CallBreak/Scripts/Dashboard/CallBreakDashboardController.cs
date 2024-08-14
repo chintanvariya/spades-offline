@@ -161,21 +161,26 @@ namespace FGSOfflineCallBreak
             {
                 case 0:
                     CallBreakUIManager.Instance.dailyRewardManager.OpenScreen();
+                    FirebaseController.instance.FirelogEvent("DailyBonus", "DashboardController", "Spades");
                     break;
                 case 1:
                     CallBreakUIManager.Instance.itemPurchase.OpenScreen();
+                    FirebaseController.instance.FirelogEvent("StoreStore", "DashboardController", "Spades");
                     break;
                 case 2:
                     CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
                     GoogleMobileAds.Sample.RewardedAdController.ShowRewardedAd();
+                    FirebaseController.instance.FirelogEvent("100FreeCoins", "DashboardController", "Spades");
                     break;
                 case 3:
                     CloseScreen();
                     if (spinnerHourlyRewardController.Ready())
                         CallBreakUIManager.Instance.spinnerController.OpenScreen(spinnerHourlyRewardController);
+                    FirebaseController.instance.FirelogEvent("LuckySpin", "DashboardController", "Spades");
                     break;
                 case 4:
                     CallBreakUIManager.Instance.collectRewardController.OpenCollectReward("Free Coins", 200, hourlyRewardController);
+                    FirebaseController.instance.FirelogEvent("FreeCoins", "DashboardController", "Spades");
                     break;
                 default:
                     break;

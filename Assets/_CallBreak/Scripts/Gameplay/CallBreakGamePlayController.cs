@@ -46,6 +46,7 @@ namespace FGSOfflineCallBreak
             CallBreakGameManager.isInGamePlay = true;
 
             gameObject.SetActive(true);
+            FirebaseController.instance.FirelogEvent("isInGamePlay", "GamePlayController", "Spades");
             //Card Deal Animation
         }
 
