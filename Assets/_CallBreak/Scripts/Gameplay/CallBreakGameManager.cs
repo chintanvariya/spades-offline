@@ -51,6 +51,8 @@ namespace FGSOfflineCallBreak
 
     public sealed class CallBreakGameManager : MonoBehaviour
     {
+        public bool isLogOff;
+
         [SerializeField]
         public UserDetails selfUserDetails;
         public static Sprite profilePicture;
@@ -79,6 +81,8 @@ namespace FGSOfflineCallBreak
 
             // Print the size
             Debug.Log("Size of integer: " + sizeOfInt + " bytes");
+
+            Debug.unityLogger.logEnabled = isLogOff;
         }
 
         internal CallBreakCardController currentCard;
