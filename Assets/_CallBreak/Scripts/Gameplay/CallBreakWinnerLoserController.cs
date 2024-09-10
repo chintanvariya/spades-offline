@@ -61,19 +61,20 @@ namespace FGSOfflineCallBreak
                     drawSprite.SetActive(true); ;
                 CallBreakSoundManager.PlaySoundEvent(SoundEffects.Win);
                 WinObjActive(true);
-                if (CallBreakGameManager.currentLobbyAmount <= 0)
+                if (CallBreakUIManager.Instance.dashboardController.currentLobbyPlay.lobbyAmount <= 0)
                 {
                     winCoinText.text = "Free";
                     homeButton.gameObject.SetActive(true);
+                    rewardedCoins = 0;
                 }
                 else
                 {
                     collectButton.gameObject.SetActive(true);
                     collect2XButton.gameObject.SetActive(true);
-                    winCoinText.text = "+" + totalWinAmount / totalWinPlayer;
+                    winCoinText.text = "+" + CallBreakUIManager.Instance.dashboardController.currentLobbyPlay.lobbyAmount * 4;
                 }
                 rankText.text = "1";
-                rewardedCoins = totalWinAmount / totalWinPlayer;
+                rewardedCoins = CallBreakUIManager.Instance.dashboardController.currentLobbyPlay.lobbyAmount * 4;
                 //HERE
                 winnerParticle01.gameObject.SetActive(true);
                 winnerParticle02.gameObject.SetActive(true);
