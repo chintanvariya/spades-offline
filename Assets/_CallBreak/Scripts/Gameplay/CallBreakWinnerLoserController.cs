@@ -41,6 +41,7 @@ namespace FGSOfflineCallBreak
 
         public void OpenWinnerAndLosserScreen(int winnerTeamIndex)
         {
+            FirebaseController.instance.FirelogEvent("Winner", "WinnerLoserController", "Spades");
             collectButton.gameObject.SetActive(false);
             collect2XButton.gameObject.SetActive(false);
             homeButton.gameObject.SetActive(false);

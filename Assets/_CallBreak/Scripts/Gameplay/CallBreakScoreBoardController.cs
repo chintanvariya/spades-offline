@@ -186,6 +186,7 @@ namespace FGSOfflineCallBreak
             switch (buttonName)
             {
                 case "Continue":
+                    FirebaseController.instance.FirelogEvent("Continue", "ScoreBoardController", "Spades");
                     if (CallBreakConstants.callBreakRemoteConfig.adsDetails.isShowInterstitialAdsOnScoreBoard)
                     {
                         CallBreakUIManager.Instance.preLoaderController.OpenPreloader();

@@ -82,10 +82,12 @@ namespace FGSOfflineCallBreak
             switch (buttonName)
             {
                 case "Collect":
+                    FirebaseController.instance.FirelogEvent("FreeCoinsCollect", "CollectRewardController", "Spades");
                     CollectChips(1);
                     hourlyRewardController.OnButtonClicked();
                     break;
                 case "Collect2X":
+                    FirebaseController.instance.FirelogEvent("FreeCoinsCollect2X", "CollectRewardController", "Spades"); 
                     CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
                     GoogleMobileAds.Sample.RewardedAdController.ShowRewardedAd();
                     break;

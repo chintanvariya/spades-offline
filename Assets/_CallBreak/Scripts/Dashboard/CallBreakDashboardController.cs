@@ -170,7 +170,7 @@ namespace FGSOfflineCallBreak
                 case 2:
                     CallBreakUIManager.Instance.preLoaderController.OpenPreloader();
                     GoogleMobileAds.Sample.RewardedAdController.ShowRewardedAd();
-                    FirebaseController.instance.FirelogEvent("100FreeCoins", "DashboardController", "Spades");
+                    FirebaseController.instance.FirelogEvent("FreeCoins100", "DashboardController", "Spades");
                     break;
                 case 3:
                     CloseScreen();
@@ -323,6 +323,7 @@ namespace FGSOfflineCallBreak
 
         public void OnButtonPlayNow(CallBreakLobbyUiController lobbyUiController)
         {
+            FirebaseController.instance.FirelogEvent("PlayNow", "DashboardController", "Spades");
             currentLobbyPlay = lobbyUiController;
             if (CallBreakConstants.callBreakRemoteConfig.adsDetails.isShowInterstitialAdsOnLobby)
             {

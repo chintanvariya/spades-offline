@@ -24,9 +24,10 @@ namespace FGSOfflineCallBreak
                 case "Yes":
                     if (CallBreakGameManager.isInGamePlay)
                     {
+                        CallBreakGameManager.isInGamePlay = false;
                         CallBreakUIManager.Instance.gamePlayController.CloseScreen();
                         CallBreakUIManager.Instance.dashboardController.OpenScreen();
-                        CloseScreen();  
+                        CloseScreen();
                     }
                     else
                     {
